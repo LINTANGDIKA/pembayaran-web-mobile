@@ -2,8 +2,8 @@
 @section('content')
 @include('Partials.Navbar')
 
-<div class="container my-lg-5" style="padding: 0 5rem;">
-    <table class="table ">
+<div class="container mt-5">
+    <table class="table">
         <thead class="table-info">
             <tr>
                 <th scope="col">No</th>
@@ -18,7 +18,7 @@
             @foreach ($transactions as $tran)
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td>{{ $tran['type'] }}</td>
+                <td style="text-transform: uppercase">{{ $tran['type'] }}</td>
                 <td>{{ $tran['nominal'] }}</td>
                 <td>{{ $tran['time'] }}</td>
                 @if ($tran['status'] == 'pending')

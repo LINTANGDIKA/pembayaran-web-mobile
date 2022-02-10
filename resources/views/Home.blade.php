@@ -12,19 +12,19 @@
                 <div class="form-check col">
                     <label class="form-check-label" for="gopay">
                         <input class="form-check-input" type="radio" value="gopay" id="gopay" name="item" required>
-                        <img src="{{ url('logo/Gopay.png') }}" alt="" srcset="" class="image-item">
+                        <img src="{{ url('logo/gopay.png') }}" alt="" srcset="" class="image-item">
                     </label>
                 </div>
                 <div class="form-check col">
                     <label class="form-check-label" for="dana">
                         <input class="form-check-input" type="radio" value="dana" id="dana" name="item" required>
-                        <img src="{{ url('logo/Dana.png') }}" alt="" srcset="" class="image-item">
+                        <img src="{{ url('logo/dana.png') }}" alt="" srcset="" class="image-item">
                     </label>
                 </div>
                 <div class="form-check col">
                     <label class="form-check-label" for="ovo">
                         <input class="form-check-input" type="radio" value="ovo" id="ovo" name="item" required>
-                        <img src="{{ url('logo/OVO.png') }}" alt="" srcset="" class="image-item">
+                        <img src="{{ url('logo/ovo.png') }}" alt="" srcset="" class="image-item">
                     </label>
                 </div>
             </div>
@@ -32,20 +32,20 @@
                 <div class="form-check col">
                     <label class="form-check-label" for="isaku">
                         <input class="form-check-input" type="radio" value="isaku" id="isaku" name="item" required>
-                        <img src="{{ url('logo/Isaku.png') }}" alt="" srcset="" class="image-item">
+                        <img src="{{ url('logo/isaku.png') }}" alt="" srcset="" class="image-item">
                     </label>
                 </div>
                 <div class="form-check col">
                     <label class="form-check-label" for="linkaja">
                         <input class="form-check-input" type="radio" value="linkaja" id="linkaja" name="item" required>
-                        <img src="{{ url('logo/LinkAja.png') }}" alt="" srcset="" class="image-item">
+                        <img src="{{ url('logo/linkAja.png') }}" alt="" srcset="" class="image-item">
                     </label>
                 </div>
                 <div class="form-check col">
                     <label class="form-check-label" for="shopeepay">
                         <input class="form-check-input" type="radio" value="shopeepay" id="shopeepay" name="item"
                             required>
-                        <img src="{{ url('logo/ShopeePay.png') }}" alt="" srcset="" class="image-item">
+                        <img src="{{ url('logo/shopeepay.png') }}" alt="" srcset="" class="image-item">
                     </label>
                 </div>
             </div>

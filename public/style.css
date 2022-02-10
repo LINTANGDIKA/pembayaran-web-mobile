@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+    .form{
+        width: 20rem;
+        height: 25rem;
+        border-radius: 25px;
+        padding-top: 1rem;
+        margin-top: 4rem;
+        background: linear-gradient(45deg,  #42b7f5cc 0%,rgba(66, 245, 189,0.4) 100%);
+    }
+    .button {
+        width: 14rem;
+        height: 2.5rem;
+        margin: 2rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color:white ;
+
+    }
+    .log, .reg{
+        outline: none;
+        background:transparent ;
+        border: 0;
+        margin: 0 1rem;
+
+    }
+    .butn{
+        background: linear-gradient(45deg,  #42b7f5cc 0%,rgba(66, 245, 189,0.4) 100%);
+        width: 7rem;
+        height: 2.5rem;
+        position: absolute;
+        /* left: 15%; */
+        cursor: pointer;
+
+    }
+    .login {
+        margin: auto;
+    }
+    .loginandregister{
+        width: 16rem;
+        height: 3.5rem;
+        margin: auto;
+        background-color:white ;
+        border: none;
+    }
+    .right{
+        right: 15%;
+    }
+    /* .left{
+        left: 15%;
+    } */
+    .google{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+        margin: 0 1rem;
+    }
+    .l {
+        text-decoration: none;
+    }
+    .logo{
+        margin: 2rem 0;
+    }
+    .login{
+        margin-top: 4rem;
+    }
+    .register {
+        display: none;
+    }
+    .link{
+        text-decoration: none;
+        color: black;
+    }
+    /*  */
+    .logoNavbar{
+        margin-left: 2rem;
+        height: 4.5rem;
+    }
+    .navbar{
+        padding: 0 8rem;
+    }
+    .teks {
+        margin-left: 1rem;
+        font-style: italic;
+        font-size: 1.5rem;
+        font-family: 'Red Hat Display', sans-serif;
+    }
+    .teks1 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: 'Red Hat Display', sans-serif;
+
+    }
+
+    /*  */
+    .profile{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .image img{
+        width: 14rem;
+    }
+    .detailProfile {
+        width: 55%;
+    }
+    .detailProfile button{
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: bold;
+    }
+    /*  */
+    .modalTeks h6{
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: bold;
+    }
+    .modalTeks h5{
+        font-weight: bold;
+        font-family: 'Red Hat Display', sans-serif;
+    }
+    /*  */
+    .home{
+        width: 50%;
+        margin: 2rem auto;
+    }
+    .title {
+        font-family: 'Red Hat Display', sans-serif;
+    }
+    .item{
+        margin-top: 5rem;
+    }
+    .image-item{
+        width: 10rem;
+        cursor: pointer;
+    }
+    .form-check h1{
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .item button {
+        width: 30%;
+    }
+    .form-label{
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .nope{
+        width: 50%;
+        margin-top: 2rem;
+    }
+    /*  */
+    .card{
+        width: 22rem;
+        padding:2rem 0;
+    }
+    /*  */
+
+    @media (max-width: 1199.98px) {
+        .home{
+            width: 60%;
+            margin: 2rem auto;
+        }
+
+    }
+    @media (max-width: 991.98px) {
+        .navbar{
+            padding: 0 ;
+        }
+        .logoNavbar{
+            height: 4rem;
+        }
+        .image img{
+            width: 11rem;
+        }
+        .home{
+            width: 75%;
+            margin: 2rem auto;
+        }
+        .detailProfile {
+            width: 60%;
+        }
+     }
+     @media (max-width: 767.98px) {
+        .navbar{
+            padding: 0 ;
+        }
+        .teks {
+            font-style: italic;
+            font-size: 1rem;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+        .teks1 {
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+        .logoNavbar{
+            height: 3.5rem;
+            margin-left: 0;
+        }
+        .home{
+            width: 90%;
+            margin: 2rem auto;
+        }
+        .image-item{
+            width: 8rem;
+            cursor: pointer;
+        }
+        .form-check h1{
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        .item-number{
+            width: 90%;
+            margin: auto;
+        }
+
+        .profile{
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image img{
+            margin: 2rem 0;
+        }
+        .detailProfile {
+            width: 100%;
+        }
+        .detailProfile button{
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+        td{
+            font-size: 0.8rem;
+        }
+
+      }
+      @media (max-width: 575.98px) {
+        .navbar{
+            padding: 0 ;
+        }
+        .teks {
+            font-style: italic;
+            font-size: 1rem;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+        .teks1 {
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+        .logoNavbar{
+            height: 3rem;
+            margin-left: 0;
+        }
+        .item button {
+            width: 100%;
+        }
+        .home{
+            width: 90%;
+            margin: 2rem auto;
+        }
+        .image-item{
+            width: 6rem;
+            cursor: pointer;
+        }
+        .form-check h1{
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        .item-number{
+            width: 100%;
+            margin: auto;
+        }
+        .nope{
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .detailProfile {
+            width: 92%;
+        }
+        .detailProfile button{
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+    }
+    @media (max-width: 470px){
+        .navbar{
+            padding: 0 ;
+        }
+        .teks {
+            font-style: italic;
+            font-size: 0.8rem;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+        .teks1 {
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+        .card {
+            width: 19rem;
+        }
+        .home{
+            width: 90%;
+            margin: 2rem auto;
+        }
+        .image-item{
+            width: 5rem;
+            cursor: pointer;
+        }
+        .form-check h1{
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+        .item-number{
+            width: 100%;
+            margin: auto;
+        }
+        .nope{
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+
+    /* body{
+        background: linear-gradient(45deg,  #42b7f5cc 0%,rgba(66, 245, 189,0.4) 100%);
+        background-repeat: no-repeat;
+    } */
