@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfe7d2fe7e804e0bab9ea21a7e66f82b",
+    "content-hash": "5f2af9b9bb71f1b7dca07b3155e8af30",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -977,6 +977,60 @@
             "time": "2022-01-31T21:39:13+00:00"
         },
         {
+            "name": "google/cloud-firestore",
+            "version": "v1.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/googleapis/google-cloud-php-firestore.git",
+                "reference": "fc659e9dcb1ac8a1966ef2625762b3f15a347a4a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-firestore/zipball/fc659e9dcb1ac8a1966ef2625762b3f15a347a4a",
+                "reference": "fc659e9dcb1ac8a1966ef2625762b3f15a347a4a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-grpc": "*",
+                "google/cloud-core": "^1.39",
+                "google/gax": "^1.1",
+                "ramsey/uuid": "^3.0|^4.0"
+            },
+            "require-dev": {
+                "erusev/parsedown": "^1.6",
+                "phpdocumentor/reflection": "^3.0",
+                "phpunit/phpunit": "^4.8|^5.0",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "suggest": {
+                "ext-protobuf": "Provides a significant increase in throughput over the pure PHP protobuf implementation. See https://cloud.google.com/php/grpc for installation instructions."
+            },
+            "type": "library",
+            "extra": {
+                "component": {
+                    "id": "cloud-firestore",
+                    "target": "googleapis/google-cloud-php-firestore.git",
+                    "path": "Firestore",
+                    "entry": "src/FirestoreClient.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Google\\Cloud\\Firestore\\": "src",
+                    "GPBMetadata\\Google\\Firestore\\": "metadata"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Cloud Firestore client for PHP",
+            "support": {
+                "source": "https://github.com/googleapis/google-cloud-php-firestore/tree/v1.21.0"
+            },
+            "time": "2022-02-08T21:14:28+00:00"
+        },
+        {
             "name": "google/cloud-storage",
             "version": "v1.26.1",
             "source": {
@@ -1031,6 +1085,49 @@
             "time": "2022-01-31T21:39:13+00:00"
         },
         {
+            "name": "google/common-protos",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/googleapis/common-protos-php.git",
+                "reference": "a1bcb7b37f1fa1c92d65c3c6339fc701a65916ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/a1bcb7b37f1fa1c92d65c3c6339fc701a65916ee",
+                "reference": "a1bcb7b37f1fa1c92d65c3c6339fc701a65916ee",
+                "shasum": ""
+            },
+            "require": {
+                "google/protobuf": "^3.6.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.36",
+                "sami/sami": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\": "src",
+                    "GPBMetadata\\Google\\": "metadata"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Google API Common Protos for PHP",
+            "homepage": "https://github.com/googleapis/common-protos-php",
+            "keywords": [
+                "google"
+            ],
+            "support": {
+                "issues": "https://github.com/googleapis/common-protos-php/issues",
+                "source": "https://github.com/googleapis/common-protos-php/tree/2.0.0"
+            },
+            "time": "2022-01-13T20:17:53+00:00"
+        },
+        {
             "name": "google/crc32",
             "version": "v0.1.0",
             "source": {
@@ -1075,6 +1172,149 @@
                 "source": "https://github.com/google/php-crc32/tree/v0.1.0"
             },
             "time": "2019-05-09T06:24:58+00:00"
+        },
+        {
+            "name": "google/gax",
+            "version": "v1.11.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/googleapis/gax-php.git",
+                "reference": "bf32dd04b5a31e6616f18bf62f49873ff16a340d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/bf32dd04b5a31e6616f18bf62f49873ff16a340d",
+                "reference": "bf32dd04b5a31e6616f18bf62f49873ff16a340d",
+                "shasum": ""
+            },
+            "require": {
+                "google/auth": "^1.18.0",
+                "google/common-protos": "^1.0||^2.0",
+                "google/grpc-gcp": "^0.2",
+                "google/protobuf": "^3.12.2",
+                "grpc/grpc": "^1.13",
+                "guzzlehttp/promises": "^1.3",
+                "guzzlehttp/psr7": "^1.7.0||^2",
+                "php": ">=5.5"
+            },
+            "conflict": {
+                "ext-protobuf": "<3.7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.36",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\ApiCore\\": "src",
+                    "GPBMetadata\\ApiCore\\": "metadata/ApiCore"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Google API Core for PHP",
+            "homepage": "https://github.com/googleapis/gax-php",
+            "keywords": [
+                "google"
+            ],
+            "support": {
+                "issues": "https://github.com/googleapis/gax-php/issues",
+                "source": "https://github.com/googleapis/gax-php/tree/v1.11.4"
+            },
+            "time": "2022-01-26T19:06:45+00:00"
+        },
+        {
+            "name": "google/grpc-gcp",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GoogleCloudPlatform/grpc-gcp-php.git",
+                "reference": "2465c2273e11ada1e95155aa1e209f3b8f03c314"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/grpc-gcp-php/zipball/2465c2273e11ada1e95155aa1e209f3b8f03c314",
+                "reference": "2465c2273e11ada1e95155aa1e209f3b8f03c314",
+                "shasum": ""
+            },
+            "require": {
+                "google/auth": "^1.3",
+                "google/protobuf": "^v3.3.0",
+                "grpc/grpc": "^v1.13.0",
+                "php": ">=5.5.0",
+                "psr/cache": "^1.0.1||^2.0.0||^3.0.0"
+            },
+            "require-dev": {
+                "google/cloud-spanner": "^1.7",
+                "phpunit/phpunit": "4.8.36"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Grpc\\Gcp\\": "src/"
+                },
+                "classmap": [
+                    "src/generated/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "gRPC GCP library for channel management",
+            "support": {
+                "issues": "https://github.com/GoogleCloudPlatform/grpc-gcp-php/issues",
+                "source": "https://github.com/GoogleCloudPlatform/grpc-gcp-php/tree/v0.2.0"
+            },
+            "time": "2021-09-27T22:57:18+00:00"
+        },
+        {
+            "name": "google/protobuf",
+            "version": "v3.19.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/protocolbuffers/protobuf-php.git",
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8.0"
+            },
+            "suggest": {
+                "ext-bcmath": "Need to support JSON deserialization"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\Protobuf\\": "src/Google/Protobuf",
+                    "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "proto library for PHP",
+            "homepage": "https://developers.google.com/protocol-buffers/",
+            "keywords": [
+                "proto"
+            ],
+            "support": {
+                "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.19.4"
+            },
+            "time": "2022-01-28T17:23:32+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1137,6 +1377,50 @@
                 }
             ],
             "time": "2021-11-21T21:41:47+00:00"
+        },
+        {
+            "name": "grpc/grpc",
+            "version": "1.42.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/grpc/grpc-php.git",
+                "reference": "9fa44f104cb92e924d4da547323a97f3d8aca6d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/9fa44f104cb92e924d4da547323a97f3d8aca6d4",
+                "reference": "9fa44f104cb92e924d4da547323a97f3d8aca6d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "google/auth": "^v1.3.0"
+            },
+            "suggest": {
+                "ext-protobuf": "For better performance, install the protobuf C extension.",
+                "google/protobuf": "To get started using grpc quickly, install the native protobuf library."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Grpc\\": "src/lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "gRPC library for PHP",
+            "homepage": "https://grpc.io",
+            "keywords": [
+                "rpc"
+            ],
+            "support": {
+                "source": "https://github.com/grpc/grpc-php/tree/v1.42.0"
+            },
+            "time": "2021-11-19T08:13:51+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2025,6 +2309,75 @@
             "time": "2022-02-01T16:29:39+00:00"
         },
         {
+            "name": "laravel/socialite",
+            "version": "v5.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/socialite.git",
+                "reference": "9b96dfd69e9c1de69c23205cb390550bc71c357e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/9b96dfd69e9c1de69c23205cb390550bc71c357e",
+                "reference": "9b96dfd69e9c1de69c23205cb390550bc71c357e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "illuminate/http": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "league/oauth1-client": "^1.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0",
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^8.0|^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Socialite\\SocialiteServiceProvider"
+                    ],
+                    "aliases": {
+                        "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Socialite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
+            "homepage": "https://laravel.com",
+            "keywords": [
+                "laravel",
+                "oauth"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/socialite/issues",
+                "source": "https://github.com/laravel/socialite"
+            },
+            "time": "2022-02-07T16:08:19+00:00"
+        },
+        {
             "name": "laravel/tinker",
             "version": "v2.7.0",
             "source": {
@@ -2556,6 +2909,82 @@
                 }
             ],
             "time": "2021-11-21T11:48:40+00:00"
+        },
+        {
+            "name": "league/oauth1-client",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth1-client.git",
+                "reference": "88dd16b0cff68eb9167bfc849707d2c40ad91ddc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/88dd16b0cff68eb9167bfc849707d2c40ad91ddc",
+                "reference": "88dd16b0cff68eb9167bfc849707d2c40ad91ddc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "guzzlehttp/psr7": "^1.7|^2.0",
+                "php": ">=7.1||>=8.0"
+            },
+            "require-dev": {
+                "ext-simplexml": "*",
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "mockery/mockery": "^1.3.3",
+                "phpstan/phpstan": "^0.12.42",
+                "phpunit/phpunit": "^7.5||9.5"
+            },
+            "suggest": {
+                "ext-simplexml": "For decoding XML-based responses."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth1\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Corlett",
+                    "email": "bencorlett@me.com",
+                    "homepage": "http://www.webcomm.com.au",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OAuth 1.0 Client Library",
+            "keywords": [
+                "Authentication",
+                "SSO",
+                "authorization",
+                "bitbucket",
+                "identity",
+                "idp",
+                "oauth",
+                "oauth1",
+                "single sign on",
+                "trello",
+                "tumblr",
+                "twitter"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth1-client/issues",
+                "source": "https://github.com/thephpleague/oauth1-client/tree/v1.10.0"
+            },
+            "time": "2021-08-15T23:05:49+00:00"
         },
         {
             "name": "monolog/monolog",

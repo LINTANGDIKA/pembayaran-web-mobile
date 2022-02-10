@@ -177,7 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
-        Kreait\Laravel\Firebase\ServiceProvider::class
+        Kreait\Laravel\Firebase\ServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
     ],
 
     /*
@@ -193,6 +194,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
     ])->toArray(),
 
 ];
