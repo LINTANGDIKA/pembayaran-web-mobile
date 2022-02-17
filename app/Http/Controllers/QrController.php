@@ -8,6 +8,7 @@ use Google\Cloud\Firestore\FieldValue;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use SimpleSoftwareIO\QrCode\Generator;
+use Illuminate\Support\Str;
 
 class QrController extends Controller
 {
@@ -26,11 +27,11 @@ class QrController extends Controller
     {
         $qrcode = new Generator;
         $data = [
-            'nomorPengguna' => $request['number'],
-            'type' => $request['item'],
+            'idTransaction' => $request['item'] . Str::random(10),
+            'tanggal' =>  Carbon::now()->toDateString(),
+            'jam' => Carbon::now()->toTimeString(),
+            'ewallet' => $request['item'],
             'nominal' => $request['nominal'],
-            'status' => 'pending',
-            'time' => Carbon::now()->toDateTimeString()
         ];
         $firebase = app('firebase.firestore')->database()->collection('Users')->document(Session::get('email'));
         $firebase->update([

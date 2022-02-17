@@ -18,6 +18,7 @@
         </a>
     </div>
     <div class="register">
+
         <a href="/auth/google" class="link">
             <button class="rounded-pill loginandregister d-flex">
                 <img src="{{ url('logo/google-logo-9824.png') }}" class="google my-auto" alt="">
