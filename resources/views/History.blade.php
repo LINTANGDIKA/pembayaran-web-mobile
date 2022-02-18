@@ -2,7 +2,7 @@
 @section('content')
 @include('Partials.Navbar')
 
-<div class="container mt-5">
+<div class="history mt-5">
     <table class="table">
         <thead class="table-info">
             <tr>
@@ -22,7 +22,7 @@
                 <td>{{ $tran['tanggal'] }}</td>
                 <td>{{ $tran['jam'] }}</td>
                 <td>{{ $tran['ewallet'] }}</td>
-                <td>{{ $tran['nominal'] }}</td>
+                <td>@currency($tran['nominal'])</td>
             </tr>
             @endforeach
         </tbody>

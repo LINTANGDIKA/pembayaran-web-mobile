@@ -30,8 +30,8 @@ class QrController extends Controller
             'idTransaction' => $request['item'] . Str::random(10),
             'tanggal' =>  Carbon::now()->toDateString(),
             'jam' => Carbon::now()->toTimeString(),
-            'ewallet' => $request['item'],
-            'nominal' => $request['nominal'],
+            'ewallet' => strtoupper($request['item']) . ' ' . currency($request['nominal']),
+            'nominal' => $request['nominal'] + 2000,
         ];
         $firebase = app('firebase.firestore')->database()->collection('Users')->document(Session::get('email'));
         $firebase->update([

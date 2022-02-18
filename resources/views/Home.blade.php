@@ -51,31 +51,31 @@
             </div>
             <div class="row item-number" style="margin-top: 4rem">
                 <div class="form-check col">
-                    <input class="form-check-input" type="radio" id="one" name="nominal" value="Rp 10.000" required>
+                    <input class="form-check-input" type="radio" id="one" name="nominal" value="10000" required>
                     <label class="form-check-label" for="one">
                         <h1>Rp 10.000</h1>
                     </label>
                 </div>
                 <div class="form-check col">
-                    <input class="form-check-input" type="radio" id="two" name="nominal" value="Rp 25.000" required>
+                    <input class="form-check-input" type="radio" id="two" name="nominal" value="25000" required>
                     <label class="form-check-label" for="two">
                         <h1>Rp 25.000</h1>
                     </label>
                 </div>
                 <div class="form-check col">
-                    <input class="form-check-input" type="radio" id="three" name="nominal" value="Rp 50.000" required>
+                    <input class="form-check-input" type="radio" id="three" name="nominal" value="50000" required>
                     <label class="form-check-label" for="three">
                         <h1>Rp 50.000</h1>
                     </label>
                 </div>
                 <div class="form-check col">
-                    <input class="form-check-input" type="radio" id="four" name="nominal" value="Rp 100.000" required>
+                    <input class="form-check-input" type="radio" id="four" name="nominal" value="100000" required>
                     <label class="form-check-label" for="four">
                         <h1>Rp 100.000</h1>
                     </label>
                 </div>
                 <div class="form-check col">
-                    <input class="form-check-input" type="radio" id="five" name="nominal" value="Rp 1.000.000" required>
+                    <input class="form-check-input" type="radio" id="five" name="nominal" value="1000000" required>
                     <label class="form-check-label" for="five">
                         <h1>Rp 1.000.000</h1>
                     </label>
