@@ -17,7 +17,7 @@
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email Address : </label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        value="{{ $email }}" disabled>
+                        value="{{ $email }}" readonly>
                 </div>
                 <button type="submit" class="btn btn-info">Update Profile</button>
             </form>

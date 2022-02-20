@@ -34,4 +34,5 @@ Route::middleware(['google'])->group(function () {
     Route::get('/history', [ViewController::class, 'viewHistory']);
     Route::get('/logout', [AuthController::class, 'logout']);
 });
-Route::get('/pwb/login', [AdminController::class, 'login']);
+Route::get('/pwb', [AdminController::class, 'login']);
+Route::post('/pwb', [AdminController::class, 'loginSistem']);
