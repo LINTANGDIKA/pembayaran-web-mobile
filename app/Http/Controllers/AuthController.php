@@ -24,6 +24,16 @@ class AuthController extends Controller
         $data = $emailfind->documents();
         foreach ($data as $da) {
             if ($da->exists()) {
+                Session::put('tokenGoogle', $signInResult->idToken());
+                Session::save();
+                Session::put('id', $signInResult->firebaseUserId());
+                Session::save();
+                Session::put('email', $signInResult->data()['email']);
+                Session::save();
+                Session::put('firstName', $signInResult->data()['firstName']);
+                Session::save();
+                return redirect('/');
+                die();
             }
         }
         $dataa = [

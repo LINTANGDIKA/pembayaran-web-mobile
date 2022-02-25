@@ -12,13 +12,15 @@ class ViewController extends Controller
         $email = Session::get('email');
         return view('Home', [
             'title' => 'Home Page',
-            'email' => $email
+            'email' => $email,
+            'role' => 'user'
         ]);
     }
     public function viewLoginAndRegister()
     {
         return view('LoginRegister', [
-            'title' => 'Register & Login Page'
+            'title' => 'Register & Login Page',
+            'role' => 'user'
         ]);
     }
     public function viewProfile()
@@ -32,6 +34,7 @@ class ViewController extends Controller
                 // dd($document->data());
                 return view('Profile', [
                     'title' => 'Profile Page',
+                    'role' => 'user',
                     'email' => $email,
                     'name' => $document->data()['name'],
                     'avatar' => $document->data()['avatar']
@@ -52,6 +55,7 @@ class ViewController extends Controller
                 $transactions = $document->data()['transaction'];
                 return view('History', [
                     'title' => 'History Page',
+                    'role' => 'user',
                     'email' => $email,
                     'transactions' => $transactions
                 ]);

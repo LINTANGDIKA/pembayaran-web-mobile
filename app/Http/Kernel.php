@@ -64,6 +64,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'google' => \App\Http\Middleware\AuthGoogle::class,
-        'guest.google' => \App\Http\Middleware\GuestGoogle::class
+        'guest.google' => \App\Http\Middleware\GuestGoogle::class,
+        'admin' => \App\Http\Middleware\Admin::class,
+        'admin.guest' => \App\Http\Middleware\AdminGuest::class,
     ];
 }

@@ -25,6 +25,7 @@ class QrController extends Controller
     }
     public function qr(Request $request)
     {
+        $firestore = app('firebase.firestore')->database()->collection('Users');
         $qrcode = new Generator;
         $data = [
             'idTransaction' => $request['item'] . Str::random(10),

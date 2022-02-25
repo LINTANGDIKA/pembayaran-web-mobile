@@ -34,5 +34,7 @@ Route::middleware(['google'])->group(function () {
     Route::get('/history', [ViewController::class, 'viewHistory']);
     Route::get('/logout', [AuthController::class, 'logout']);
 });
-Route::get('/pwb', [AdminController::class, 'login']);
+Route::get('/pwb', [AdminController::class, 'login'])->middleware('admin.guest');
 Route::post('/pwb', [AdminController::class, 'loginSistem']);
+Route::get('/pwb/logout', [AdminController::class, 'logout']);
+Route::get('/pwb/dashboard', [AdminController::class, 'dashboardAdminView'])->middleware('admin');
