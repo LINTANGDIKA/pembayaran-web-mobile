@@ -23,16 +23,20 @@ class AdminController extends Controller
         $query = $firebase->where('id', '=', $request['idlogin']);
         $documents = $query->documents();
         foreach ($documents as $document) {
-            if ($request['password'] === $document->data()['password']) {
-                Session::put('id', $document->data()['id']);
-                Session::save();
-                alert()->success('Login Berhasil', 'Selamat Datang Admin');
-                return redirect('/pwb/dashboard');
-            } else {
-                alert()->error('Login Gagal', 'Maaf Admin Password Salah');
-                return redirect('/pwb');
+            if ($document->exists()) {
+                if ($request['password'] === $document->data()['password']) {
+                    Session::put('id', $document->data()['id']);
+                    Session::save();
+                    alert()->success('Login Berhasil', 'Selamat Datang Admin');
+                    return redirect('/pwb/dashboard');
+                } else {
+                    alert()->error('Login Gagal', 'Maaf Admin Password Salah');
+                    return redirect('/pwb');
+                }
             }
         }
+        alert()->warning('Login Gagal', 'Maaf Id Tidak Ditemukan Atau Anda Bukan Admin!');
+        return redirect('/login');
     }
     public function dashboardAdminView()
     {
