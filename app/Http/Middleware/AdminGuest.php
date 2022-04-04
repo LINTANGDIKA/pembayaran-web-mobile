@@ -16,7 +16,7 @@ class AdminGuest
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->session()->exists('id')) {
+        if ($request->session()->exists('idAdmin')) {
             return redirect('/pwb/dashboard');
         }
         return $next($request);

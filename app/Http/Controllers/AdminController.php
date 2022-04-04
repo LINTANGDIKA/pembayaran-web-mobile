@@ -22,10 +22,11 @@ class AdminController extends Controller
         $firebase = app('firebase.firestore')->database()->collection('AdminId');
         $query = $firebase->where('id', '=', $request['idlogin']);
         $documents = $query->documents();
+
         foreach ($documents as $document) {
             if ($document->exists()) {
                 if ($request['password'] === $document->data()['password']) {
-                    Session::put('id', $document->data()['id']);
+                    Session::put('idAdmin', $document->data()['id']);
                     Session::save();
                     alert()->success('Login Berhasil', 'Selamat Datang Admin');
                     return redirect('/pwb/dashboard');
@@ -36,7 +37,7 @@ class AdminController extends Controller
             }
         }
         alert()->warning('Login Gagal', 'Maaf Id Tidak Ditemukan Atau Anda Bukan Admin!');
-        return redirect('/login');
+        return redirect('/pwb');
     }
     public function dashboardAdminView()
     {
@@ -53,7 +54,7 @@ class AdminController extends Controller
     }
     public function logout()
     {
-        Session::remove('id');
+        Session::remove('idAdmin');
         return redirect('/pwb');
     }
 }

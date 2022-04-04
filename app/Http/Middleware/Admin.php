@@ -16,7 +16,7 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!$request->session()->exists('id')) {
+        if (!$request->session()->exists('idAdmin')) {
             return abort(404);
         }
         return $next($request);
