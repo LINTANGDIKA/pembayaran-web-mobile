@@ -27,7 +27,6 @@ Route::middleware(['google'])->group(function () {
     Route::get('/', [ViewController::class, 'viewHome']);
     Route::post('/', [ItemController::class, 'itemValidate']);
     Route::get('/profile', [ViewController::class, 'viewProfile']);
-    Route::post('/profile', [ProfileController::class, 'updateProfile']);
     Route::get('/pembayaran', [QrController::class, 'qrView']);
     Route::post('/', [QrController::class, 'qr']);
     Route::get('/download', [QrController::class, 'download']);
